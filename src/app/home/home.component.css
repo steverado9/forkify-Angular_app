@@ -1,0 +1,34 @@
+.header{
+    background-color: #F2EFE7;
+    width: 92.9%;
+}
+
+.input_div{
+    width: 450px;
+    background-color: white;
+}
+
+.input_button {
+    background: linear-gradient(to right bottom, #b47722, #8b386a);
+    border-radius: 25px;
+    color: white;
+}
+
+.input_itself , 
+.input_itself {
+    outline: none;
+}
+
+span .icon {
+    font-size: 1.5rem;
+    color: #b47722
+}
+
+.space {
+    visibility: hidden;
+}
+
+.home_div{
+    width: 92.9%;
+    height: 100vh;
+}

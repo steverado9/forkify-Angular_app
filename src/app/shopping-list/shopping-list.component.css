@@ -1,0 +1,11 @@
+div{
+    background-color: white;
+    height: 100vh;
+}
+
+div p {
+    color: #b47722;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
