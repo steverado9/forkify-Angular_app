@@ -1,4 +1,31 @@
-div{
-    background-color: #F2EFE7;
-    height: 100vh;
+.recipe_fig {
+    content: '';
+    display: block;
+}
+
+.recipe_img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipe_title {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 20%) skewY(-6deg);
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.75rem;
+    text-transform: uppercase;
+    width: 70%;
+    line-height: 1.95;
+    text-align: center;
+}
+
+.recipe_title span {
+    box-decoration-break: clone;
+    padding: 1.3rem 2rem;
+    background-image: linear-gradient(to right bottom, #b47722, #8b386a);
 }

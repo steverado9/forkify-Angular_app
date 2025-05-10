@@ -1,4 +1,46 @@
-div{
-    background-color: white;
-    height: 100vh;  
+.result_list{
+    list-style: none;
+}
+
+.results_link {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    transition: 0.3s;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.results_fig {
+    flex: 0 0 5.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 5.5rem;
+    margin-right: 2rem;
+    position: relative;
+    backface-visibility: hidden;
+}
+
+.results_fig img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .3s;
+}
+
+.results_name{
+    font-size: 1.1rem;
+    color: #d38212;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: .3rem;
+}
+
+.results_author{
+    font-size: 1.1rem;
+    color: #968B87;
+    opacity: 0.8;
+    text-transform: uppercase;
+    font-weight: 400;
 }

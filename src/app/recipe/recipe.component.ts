@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ForkifyServiceService } from '../forkify-service.service';
+import { Recipe } from '../recipe';
+import { log } from 'console';
 
 @Component({
   selector: 'app-recipe',
@@ -8,4 +11,21 @@ import { Component } from '@angular/core';
 })
 export class RecipeComponent {
 
+  recipeDetails: Recipe | undefined;
+
+  constructor(private forkifyServiceService: ForkifyServiceService) { }
+  ngOnInit() {
+    this.forkifyServiceService.currentMessage.subscribe(
+      (msg) => {
+        if (msg != '') {
+          this.forkifyServiceService.getRecipeDetails(msg).then((result: any) => {
+            this.recipeDetails = result.recipe;
+          })
+        }
+      }
+    );
+  }
+
+
 }
+

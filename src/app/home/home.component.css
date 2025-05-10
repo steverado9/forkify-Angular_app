@@ -1,10 +1,19 @@
 .header{
-    background-color: #F2EFE7;
     width: 92.9%;
 }
 
 .input_div{
     width: 450px;
+}
+
+.header,
+.recipes{
+    background-color: #F2EFE7;
+}
+
+.input_div,
+.results,
+.shopping_lists {
     background-color: white;
 }
 
@@ -30,5 +39,11 @@ span .icon {
 
 .home_div{
     width: 92.9%;
+    height: 100vh;
+}
+
+.results,
+.recipes,
+.shopping_lists {
     height: 100vh;
 }

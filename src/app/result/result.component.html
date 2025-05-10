@@ -1,1 +1,13 @@
-<div class="">result</div>
+<ul class="result_list">
+    <li *ngFor="let result of results" (click)="getResultId(result.recipe_id)">
+        <a class="results_link" href="#{{ result.recipe_id }}">
+            <figure class="results_fig">
+                <img [src]="result.image_url" alt="{{ result.title }}">
+            </figure>
+            <div class="results_data">
+                <h4 class="results_name">{{ result.title.slice(0, 13) + "..." }}</h4>
+                <p class="results_author">{{ result.publisher }}</p>
+            </div>
+        </a>
+    </li>
+</ul>

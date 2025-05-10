@@ -2,18 +2,17 @@
     <div class="ms-5 ">
         <img [src]="imgUrl" alt="forkify_logo" width="120px" height="120px" />
     </div>
-    <form class="" (submit)="filterResults(filter.value)" >
-        <div class="input_div rounded-pill">
-            <input type="text" class="p-3 w-75 border border-0 rounded-start-pill input_itself"
-                placeholder="Search over 1,000,000 recipes..." #filter>
-            <button type="submit" class="p-3 w-25 border border-0 input_button"><i class="bi bi-search"></i>
-                SEARCH</button>
-        </div>
-    </form>
+    <div class="input_div rounded-pill">
+        <input type="text" class="p-3 w-75 border border-0 rounded-start-pill input_itself"
+            placeholder="Search over 1,000,000 recipes..." #filter>
+        <button (click)="getResults(filter.value)" type="submit" class="p-3 w-25 border border-0 input_button"><i
+                class="bi bi-search"></i>
+            SEARCH</button>
+    </div>
     <span class="me-5"><span class="space">jgnvngnbb</span><i class=" icon bi bi-heart-fill"></i></span>
 </div>
 <div class="d-flex justify-content-between mx-5 home_div">
-    <app-result class="w-25"></app-result>
-    <app-recipe class="w-50"></app-recipe>
-    <app-shopping-list class="w-25"></app-shopping-list>
+    <app-result class="results w-25" [results]="resultList"></app-result>
+    <app-recipe class="recipes w-50"></app-recipe>
+    <app-shopping-list class="shopping_lists  w-25"></app-shopping-list>
 </div>
