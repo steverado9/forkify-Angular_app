@@ -45,5 +45,6 @@ span .icon {
 .results,
 .recipes,
 .shopping_lists {
-    height: 100vh;
+    height: 185vh;
+    overflow: hidden;
 }

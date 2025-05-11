@@ -3,8 +3,10 @@
         <img [src]="imgUrl" alt="forkify_logo" width="120px" height="120px" />
     </div>
     <div class="input_div rounded-pill">
+        <!--#filter is used to get the value of input in angular-->
         <input type="text" class="p-3 w-75 border border-0 rounded-start-pill input_itself"
             placeholder="Search over 1,000,000 recipes..." #filter>
+            <!--On button click, call getResult function with argument(value of input)-->
         <button (click)="getResults(filter.value)" type="submit" class="p-3 w-25 border border-0 input_button"><i
                 class="bi bi-search"></i>
             SEARCH</button>
@@ -12,6 +14,7 @@
     <span class="me-5"><span class="space">jgnvngnbb</span><i class=" icon bi bi-heart-fill"></i></span>
 </div>
 <div class="d-flex justify-content-between mx-5 home_div">
+    <!--added resultlist as a property into app-result ie resultList === [results]-->
     <app-result class="results w-25" [results]="resultList"></app-result>
     <app-recipe class="recipes w-50"></app-recipe>
     <app-shopping-list class="shopping_lists  w-25"></app-shopping-list>

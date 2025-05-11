@@ -10,9 +10,13 @@ import { ForkifyServiceService } from '../forkify-service.service';
   styleUrl: './result.component.css'
 })
 export class ResultComponent {
+  //input content from parent component
   @Input() results: Result[] = [];
 
+  //injects folkifyservice into the result component
   constructor(private forkifyServiceService: ForkifyServiceService) {}
+
+  //function to get result.recipe_id and sends it to the forkifyservice
   getResultId(value: string) {
     this.forkifyServiceService.changeMessage(value);
   }

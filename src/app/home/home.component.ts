@@ -9,7 +9,7 @@ import { Result } from '../result';
 @Component({
   selector: 'app-home',
   imports: [CommonModule, ResultComponent, RecipeComponent, ShoppingListComponent],
-  templateUrl: './home.component.html', 
+  templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 
@@ -17,16 +17,17 @@ import { Result } from '../result';
 
 export class HomeComponent {
   imgUrl = 'https://forkify-your-recipe.netlify.app/img/logo.svg';
-  
-  result: Result[] = [];
+
+  //inject forkifyservice 
   forkifyServiceService = inject(ForkifyServiceService);
-  resultList: Result[]= [];
+  //resultList is annotated to Result[] interface
+  resultList: Result[] = [];
 
-
+  //function to getResult
   getResults(text: string) {
+    //it also calls searchforkifyApi in forkifyservice, then get it result and put it inside resultList which is an array
     this.forkifyServiceService.searchForkifyApi(text).then((result: any) => {
       this.resultList = result.recipes
-      console.log(this.resultList);
     })
   }
 

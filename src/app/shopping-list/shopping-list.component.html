@@ -1,2 +1,11 @@
-<p class="text-center p-3">MY SHOPPING LIST</p>
+<div class="shopping">
+    <p class="text-center p-3" class="heading-2">MY SHOPPING LIST</p>
+    <ul class="shopping_list">
+        <li *ngFor="let recipe of recipeList" class="shopping_item">
+            {{ recipe }}
+        </li>
+    </ul>
+</div>
+
+
 

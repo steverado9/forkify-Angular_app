@@ -1,6 +1,26 @@
-p {
+.shopping {
+    padding: 3rem 4rem 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading-2 {
     color: #b47722;
     font-weight: 500;
     font-size: 1.1rem;
 }
+
+.shopping_list {
+    list-style: none;
+    max-height: 200rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.shopping_item {
+    border-bottom: 1px solid #F2EFEE;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
 
